@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static%}
+
+    <head>
+      <title>ALUMNIA PORTAL</title>
+      <meta content="" name="description">
+      <meta content="" name="keywords">
+    
+      <!-- Favicons -->
+      <title>ALUMNI PORTAL</title>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+      
+          <!-- Favicons -->
+          <link href="{% static 'blog/assets/img/favicon.png'%}" rel="icon">
+          <link href="{% static 'blog/assets/img/apple-touch-icon.png'%}" rel="apple-touch-icon">
+          <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+        
+          <!-- Google Fonts -->
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+        
+          <!-- Vendor CSS Files -->
+          <link href="{% static 'blog/assets/vendor/animate.css/animate.min.css'%}" rel="stylesheet">
+          <link href="{% static 'blog/assets/vendor/aos/aos.css'%}" rel="stylesheet">
+          <link href="{% static 'blog/assets/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+          <link href="{% static 'blog/assets/vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+          <link href="{% static 'blog/assets/vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
+          <link href="{% static 'blog/assets/vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
+          <link href="{% static 'blog/assets/vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+        
+          <!-- Template Main CSS File -->
+          <link href="{% static 'blog/assets/css/style.css'%}" rel="stylesheet">
+        
+    <style>
+
+        body{margin-top:40px;}
+.icon-box.medium {
+    font-size: 20px;
+    width: 40px;
+    height: 50px;
+    line-height: 50px;
+}
+.icon-box {
+    font-size: 30px;
+    margin-bottom: 33px;
+    display: inline-block;
+    color: #ffffff;
+    height: 65px;
+    width: 65px;
+    line-height: 65px;
+    background-color: #59b73f;
+    text-align: center;
+    border-radius: 0.3rem;
+}
+.social-icon-style2 li a {
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    color: #ffffff;
+    background: #59b73f;
+    height: 41px;
+    line-height: 41px;
+    width: 41px;
+}
+.rounded-3 {
+    border-radius: 0.3rem !important;
+}
+
+.social-icon-style2 {
+    margin-bottom: 0;
+    display: inline-block;
+    padding-left: 10px;
+    list-style: none;
+}
+
+.social-icon-style2 li {
+    vertical-align: middle;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+a, a:active, a:focus {
+    color: #616161;
+    text-decoration: none;
+    transition-timing-function: ease-in-out;
+    -ms-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -webkit-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-duration: .2s;
+    -ms-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -o-transition-duration: .2s;
+}
+
+.text-secondary, .text-secondary-hover:hover {
+    color: #59b73f !important;
+}
+.display-25 {
+    font-size: 1.4rem;
+}
+
+.text-primary, .text-primary-hover:hover {
+    color: #ff712a !important;
+}
+
+p {
+    margin: 0 0 20px;
+}
+
+.mb-1-6, .my-1-6 {
+    margin-bottom: 1.6rem;
+}
+    </style>
+  
+</head>
+<body>
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container d-flex justify-content-between align-items-center">
+    
+          <div class="logo">
+            <h1 class="text-light"><a href=""><span>ALUMNI PORTAL</span></a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+          </div>
+    
+          <nav id="navbar" class="navbar">
+            <ul>
+
+             
+             
+             
+            
+              <li><a href="contact">Contact Us</a></li>
+              <li>
+                <a href="{% url 'logout' %}">Logout</a>
+                    </li>
+            
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+          </nav>
+          <!-- .navbar -->
+    
+        </div>
+      </header>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.css">
+<div class="container" style="margin-top:90px">
+    <div class="row justify-content-center">
+        <div class="col-md-5 col-lg-4 mb-5 mb-lg-0 wow fadeIn">
+            <div class="card border-0 shadow">
+                <img src="{% static 'blog/assets/img/features-2.svg' %}" alt="...">
+                <div class="card-body p-1-9 p-xl-5">
+                    <div class="mb-4">
+                        <h3 class="h5 mb-0">{{proff.user}}</h3>
+                        <span class="text-primary">CEO &amp; Founder</span>
+                    </div>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-3"><a href="#!"><i class="far fa-envelope display-25 me-3 text-secondary"></i>{{proff.email}}</a></li>
+                        <li class="mb-3"><a href="#!"><i class="fas fa-mobile-alt display-25 me-3 text-secondary"></i>{{proff.phonenumber}}</a></li>
+                        <li><a href="#!"><i class="fas fa-map-marker-alt display-25 me-3 text-secondary"></i>NEar pg college , Gopeshwar</a></li>
+                    </ul>
+                    <ul class="social-icon-style2 ps-0">
+                        <li><a href="#!" class="rounded-3"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#!" class="rounded-3"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#!" class="rounded-3"><i class="fab fa-youtube"></i></a></li>
+                        <li><a href="#!" class="rounded-3"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="ps-lg-1-6 ps-xl-5">
+                <div class="mb-5 wow fadeIn">
+                    <div class="text-start mb-1-6 wow fadeIn">
+                        <h2 class="h1 mb-0 text-primary">#About Me</h2>
+                    </div>
+                    <p>{{proff.bio}}</p>
+                    <p class="mb-0"></p>
+                </div>
+                <div class="mb-5 wow fadeIn">
+                    <div class="text-start mb-1-6 wow fadeIn">
+                        <h2 class="mb-0 text-primary">#Education</h2>
+                    </div>
+                    <div class="row mt-n4">
+                        <div class="col-sm-6 col-xl-4 mt-4">
+                            <div class="card text-center border-0 rounded-3">
+                                <div class="card-body">
+                                    <i class="ti-bookmark-alt icon-box medium rounded-3 mb-4"></i>
+                                    <h3 class="h5 mb-3">Education</h3>
+                                    <p class="mb-0">institute of technalogy Gopeshwar</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-4 mt-4">
+                            <div class="card text-center border-0 rounded-3">
+                                <div class="card-body">
+                                    <i class="ti-pencil-alt icon-box medium rounded-3 mb-4"></i>
+                                    <h3 class="h5 mb-3">Career Start</h3>
+                                    <p class="mb-0">After complete engineer join google as software engineer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-4 mt-4">
+                            <div class="card text-center border-0 rounded-3">
+                                <div class="card-body">
+                                    <i class="ti-medall-alt icon-box medium rounded-3 mb-4"></i>
+                                    <h3 class="h5 mb-3">Experience</h3>
+                                    <p class="mb-0">About 20 years of experience and professional in signage</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wow fadeIn">
+                    <div class="text-start mb-1-6 wow fadeIn">
+                        <h2 class="mb-0 text-primary">#Skills &amp; Experience</h2>
+                    </div>
+                    <p class="mb-4">A skill is the learned ability to perform an action with determined results with good execution often within a given amount of time, energy, or both. Skills can often be divided into domain-general and domain-specific skills. For example, in the domain of work, some general skills would include time management, teamwork and leadership, self-motivation and others</p>
+                    <div class="progress-style1">
+                        <div class="progress-text">
+                            <div class="row">
+                                <div class="col-6 fw-bold">Bootstrap</div>
+                                <div class="col-6 text-end">70%</div>
+                            </div>
+                        </div>
+                        <div class="custom-progress progress rounded-3 mb-4">
+                            <div class="animated custom-bar progress-bar slideInLeft" style="width:70%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="10" role="progressbar"></div>
+                        </div>
+                        <div class="progress-text">
+                            <div class="row">
+                                <div class="col-6 fw-bold">javascript</div>
+                                <div class="col-6 text-end">90%</div>
+                            </div>
+                        </div>
+                        <div class="custom-progress progress rounded-3 mb-4">
+                            <div class="animated custom-bar progress-bar bg-secondary slideInLeft" style="width:90%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" role="progressbar"></div>
+                        </div>
+                        <div class="progress-text">
+                            <div class="row">
+                                <div class="col-6 fw-bold">Python</div>
+                                <div class="col-6 text-end">80%</div>
+                            </div>
+                        </div>
+                        <div class="custom-progress progress rounded-3">
+                            <div class="animated custom-bar progress-bar bg-dark slideInLeft" style="width:80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" role="progressbar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+   
+<script src="{% static 'blog/assets/vendor/purecounter/purecounter.js'%}"></script>
+<script src="{% static 'blog/assets/vendor/aos/aos.js'%}"></script>
+<script src="{% static 'blog/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+<script src="{% static 'blog/assets/vendor/glightbox/js/glightbox.min.js'%}"></script>
+<script src="{% static 'blog/assets/vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+<script src="{% static 'blog/assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+<script src="{% static 'blog/assets/vendor/waypoints/noframework.waypoints.js'%}"></script>
+<script src="{% static 'blog/assets/vendor/php-email-form/validate.js'%}"></script>
+
+<!-- Template Main JS File -->
+<script src="{% static 'blog/assets/js/main.js'%}"></script>
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>editalumni</title>
+    <link rel="stylesheet" href="assets/css/EditProfile.css">
+     <!-- <link href="assets/css/style.css" rel="stylesheet">  -->
+
+    	<!-- Favicons -->
+        <link href="{% static 'blog/assets/img/favicon.png'%}" rel="icon">
+        <link href="{% static 'blog/assets/img/apple-touch-icon.png'%}" rel="apple-touch-icon">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+      
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+      
+        <!-- Vendor CSS Files -->
+        <link href="{% static 'blog/assets/vendor/animate.css/animate.min.css'%}" rel="stylesheet">
+        <link href="{% static 'blog/assets/vendor/aos/aos.css'%}" rel="stylesheet">
+        <link href="{% static 'blog/assets/vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+        <link href="{% static 'blog/assets/vendor/bootstrap-icons/bootstrap-icons.css'%}" rel="stylesheet">
+        <link href="{% static 'blog/assets/vendor/boxicons/css/boxicons.min.css'%}" rel="stylesheet">
+        <link href="{% static 'blog/assets/vendor/glightbox/css/glightbox.min.css'%}" rel="stylesheet">
+        <link href="{% static 'blog/assets/vendor/swiper/swiper-bundle.min.css'%}" rel="stylesheet">
+      
+        <!-- Template Main CSS File -->
+       
+      
+  
+</head>
+ <body class="img js-fullheight"  style="background-color: linear-gradient( rgba(102, 155, 184, 0.8), rgba(33, 82, 106, 0.6)), "> 
+    <div class="container-xl px-4 mt-4" style="margin-top: 20px;">
+       <h1 style="text-align: center;margin-top:10px;font-family:sans-serif ;">Alumni Details</h1>
+
+        <hr class="mt-0 mb-4">
+        <div class="row">
+           
+            <div class="col-xl-12">
+                <!-- Account details card-->
+                <div class="card mb-4">
+                    <div class="card-header">Account Details</div>
+                    <div class="card-body">
+                        
+                            <!-- --------------------------------------FORM------------------------------------------ -->
+                         
+                            <form action="editprofilealumni" method="POST">  
+                                {% csrf_token %}
+
+
+                            <div class="col-xl-12 ">
+               
+                    <div class="card mb-6 mb-xl-0"style="height: 160px;">
+                    
+                        <div class="card-body text-center"  >
+                           
+                        
+                            <div class="small font-italic text-muted mb-4" style="font-weight: bold;">Upload Your Profile Picture</div>
+                        <!-- <div class="file btn btn-lg btn-primary" style=" position: relative;overflow: hidden">
+                                Upload
+                                <input style=" position: absolute;
+                                font-size: 50px;
+                                opacity: 0;
+                                right: 0;
+                                top: 0;"type="file" id="file" name="file/">
+                            </div> -->
+                            <div>
+                        
+                              <input type="file" id="file" name="picture">
+                            
+                            </div>
+                        </div>
+                    </div>
+            </div><br>
+                           
+                           
+                           
+                            <div class="row gx-3 mb-3"style="font-weight:bold">
+                               
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputFirstName" name="fathername">Father's Name</label>
+                                    <input class="form-control" id="fathername" type="text" placeholder="Enter your Father's Name" >
+                                </div>
+                             
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputLastName" name="mothername">Mother's Name</label>
+                                    <input class="form-control" id="mother name" type="text" placeholder="Enter your Mother's Name" >
+                                </div>
+                            </div>
+                            
+                            <div class="row gx-3 mb-3"style="font-weight:bold">
+                            
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputOrgName" name="city">City</label>
+                                    <input class="form-control" id="inputOrgName" type="text" placeholder="Enter your City" >
+                                </div>
+                            
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputLocation" name="state">State</label>
+                                    <input class="form-control" id="inputLocation" type="text" placeholder="Enter your State" >
+                                
+                                </div>
+                               
+                            </div>
+                            
+                            <div class="row gx-3 mb-3"style="font-weight:bold">
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputEmailAddress" name="email">Email address</label>
+                                    <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email-address" >
+                                    
+                                
+                                </div> 
+                                <div class="col-md-6">
+                                    <label class="small mb-1" name="dateofbirth">Date Of Birth</label>
+                                    <input class="form-control" type="date" id="birthday" name="birthday"> </div>
+                                
+
+                               
+                            </div>
+                                
+
+
+
+                            <div class="row gx-3 mb-3"style="font-weight:bold">
+                             
+                                <div class="col-md-6">
+                                    <label class="small mb-1" for="inputPhone" name="phonenumber">Phone number</label>
+                                    <input class="form-control" id="inputPhone" type="phonenumber" placeholder="Enter your phone number" >
+                                </div>
+                                <div class="col-md-4">
+                                        <label class="small mb-1"  name="gender">Your Gender</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Gender</option>
+                                            <option value="1">Male</option>
+                                            <option value="2">Female</option>
+                                        
+                                        </select>
+                                </div>
+                            
+                            </div>
+
+
+
+                            <div class="row gx-3 mb-3"style="font-weight:bold">
+                                <div class="col-md-6">
+                                    <label class="small mb-1"  name="currentaddress" >Current-Adress</label>
+                                    <input class="form-control"  type="text" placeholder="Enter your Current-address" >
+                                    
+                                
+                                </div> 
+                                <div class="col-md-6">
+                                    <label class="small mb-1" name="permanentaddress">Permanent-Adress</label>
+                                    <input class="form-control" type="text" placeholder="Enter your Permanent-address" >
+                                    
+                                
+                                </div> 
+                                
+                               
+                            </div>
+                            <div class="row gx-3 mb-3"style="font-weight:bold">
+                                <div class="col-md-6">
+                                    <label class="small mb-1"  name="jobprofile">Job profile</label>
+                                    <input class="form-control"  type="text" placeholder="Enter Your job profile " >
+                                    
+                                
+                                </div> 
+                                <div class="col-md-6"style="font-weight:bold">
+                                    <label class="small mb-1"  name="joblocation">Job Location</label>
+                                    <input class="form-control" type="text" placeholder="Enter Your Job Location" >
+                                    
+                                
+                                </div> 
+                                
+                               
+                            </div>
+                            <div class="row gx-3 mb-3"style="font-weight:bold">
+                                <div class="col-md-6">
+                                    <label class="small mb-1"  name="companyname">Company Name</label>
+                                    <input class="form-control"  type="text" placeholder="Enter Your Company Name" >
+                                    
+                                
+                                </div> 
+                                <!-- <div class="col-md-6"style="font-weight:bold">
+                                  <label class="small mb-1" for="inputEmailAddress">Job Location</label>
+                                  <input class="form-control" id="inputEmailAddress" type="joblocation" placeholder="" >
+                                  
+                              
+                              </div>  -->
+                               
+                                
+                               
+                            </div>
+
+
+                            <div class="row gx-3 mb-3"style="font-weight:bold">
+                                
+                                 <div class="col-md-12">
+                                    <label class="small mb-1"  name="skill">Skill</label>
+                                    <input class="form-control" style="height:100px;"  type="joblocation" placeholder="Enter your skills" >
+                                    
+                                
+                                </div> 
+                               
+                            </div>
+                            <div class="row gx-3 mb-3"style="font-weight:bold">
+                                <div class="col-md-12">
+                                    <label class="small mb-1" name="bio">Bio</label>
+                                    <input class="form-control"  type="bio" placeholder="Enter Your Bio" style="height:100px;" >
+                                    
+                                
+                                </div> 
+                                
+                               
+                            </div>
+
+
+                               
+                           
+
+                          
+                           
+                            <button class="btn btn-primary" type="submit">Save </button>
+
+
+                        </form>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{% static 'blog/assets/vendor/purecounter/purecounter.js'%}"></script>
+    <script src="{% static 'blog/assets/vendor/aos/aos.js'%}"></script>
+    <script src="{% static 'blog/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+    <script src="{% static 'blog/assets/vendor/glightbox/js/glightbox.min.js'%}"></script>
+    <script src="{% static 'blog/assets/vendor/isotope-layout/isotope.pkgd.min.js'%}"></script>
+    <script src="{% static 'blog/assets/vendor/swiper/swiper-bundle.min.js'%}"></script>
+    <script src="{% static 'blog/assets/vendor/waypoints/noframework.waypoints.js'%}"></script>
+    <script src="{% static 'blog/assets/vendor/php-email-form/validate.js'%}"></script>
+    
+    <!-- Template Main JS File -->
+    <script src="{% static 'blog/assets/js/main.js'%}"></script>
+</body>
+</html>
